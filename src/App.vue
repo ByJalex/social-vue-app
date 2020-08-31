@@ -1,32 +1,86 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div class="nav">
+      <div class="content-nav">
+        <div class="item-nav">
+          <router-link to="/">
+            <i class="bx bx-home bx-sm icon-nav"></i>
+          </router-link>
+        </div>
+        <div>
+          <router-link to="/favorite">
+            <i class="bx bx-star bx-sm icon-nav"></i>
+          </router-link>
+        </div>
+        <div class="center-button">
+          <router-link to="/add">
+            <i class="bx bx-plus bx-sm"></i>
+          </router-link>
+        </div>
+        <div>
+          <router-link to="/messages">
+            <i class="bx bx-message-square-detail bx-sm icon-nav"></i>
+          </router-link>
+        </div>
+        <div>
+          <router-link to="/profile">
+            <i class="bx bx-slider-alt bx-sm icon-nav"></i>
+          </router-link>
+        </div>
+      </div>
     </div>
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+* {
+  font-family: 'Josefin Sans', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-#nav {
-  padding: 30px;
+a{
+  text-decoration: none;
+  color: #499EF9;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.icon-nav {
+  color: #808080;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+.center-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 55px;
+  width: 55px;
+  background-color: #499ef9;
+  margin-top: -35px;
+  color: white;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: white;
+}
+
+.center-button a i {
+  color: white;
+}
+
+.content-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.nav {
+  bottom: 0;
+  width: 100%;
+  position: fixed;
+  background-color: #fff;
+}
+
+.nav a.router-link-exact-active i {
+  color: #353535;
 }
 </style>
